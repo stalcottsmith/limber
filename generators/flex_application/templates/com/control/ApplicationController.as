@@ -20,10 +20,8 @@ package com.<%= file_name %>.control {
 			<% (model_names-read_only_models).each do |model_name| %>addCommand(EventNames.UPDATE_<%= model_name.underscore.upcase %>, Update<%= model_name.camelcase %>Command);
             <% end %>
 
-            addCommand(EventNames.CREATE_SESSION, CreateSessionCommand);
-            addCommand(EventNames.DESTROY_SESSION, DestroySessionCommand);
-/*            addCommand(EventNames.SHOW_NOTE, ShowNoteCommand);
-            addCommand(EventNames.LOAD_URL, LoadURLCommand);*/
+            <% if actions.include?('user') %>addCommand(EventNames.CREATE_SESSION, CreateSessionCommand);
+            addCommand(EventNames.DESTROY_SESSION, DestroySessionCommand);<% end %>
         }
     }
 }

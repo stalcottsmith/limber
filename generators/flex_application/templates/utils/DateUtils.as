@@ -1,4 +1,4 @@
-package com.<% file_name %>.util
+package com.<%= file_name %>.util
 {
   public class DateUtils
   {
