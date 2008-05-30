@@ -24,6 +24,8 @@ class FlexApplicationGenerator < Rails::Generator::NamedBase
     	end
       m.directory("app/flex/com/#{file_name}/components")
       m.directory("app/flex/com/#{file_name}/control")
+      m.directory("app/flex/com/#{file_name}/css")
+  	  m.file("application.css", "app/flex/com/#{file_name}/css/#{file_name}.css")
   	  m.directory("app/flex/com/#{file_name}/model")
   	  m.directory("app/flex/com/#{file_name}/util")
   	  m.template("utils/DateUtils.as", "app/flex/com/#{file_name}/util/DateUtils.as")
