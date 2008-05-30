@@ -25,7 +25,7 @@ class FlexApplicationGenerator < Rails::Generator::NamedBase
   	  m.directory("app/flex/com/#{file_name}/util")
   	  m.template("utils/CairngormUtils.as", "app/flex/com/#{file_name}/util/CairngormUtils.as")
   	  m.template("utils/DebugMessage.as", "app/flex/com/#{file_name}/util/DebugMessage.as")
-  	  m.template("utils/ServiceUtils.as", "app/flex/com/#{file_name}/util/ServiceUtils.as")
+  	  m.template("utils/ServiceUtils.as", "app/flex/com/#{file_name}/util/ServiceUtils.as", :collision => :skip)
   	  m.template("utils/XMLUtils.as", "app/flex/com/#{file_name}/util/XMLUtils.as")
   	  m.directory("app/flex/com/#{file_name}/validators")
   	  m.template("com/validators/ServerErrors.as", "app/flex/com/#{file_name}/validators/ServerErrors.as")
