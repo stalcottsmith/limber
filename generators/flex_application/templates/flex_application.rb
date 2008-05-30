@@ -10,8 +10,16 @@ class <%= file_name.camelcase %> < Limber::Components::Application
   
   has_components :progress_popup
   
+  # If this method is defined in your component, the ActionScript is 
+  # included at the top of the .mxml file.  The debug() function is
+  # necessary only in the top-level Application component.
   def custom_action_script
-    
+    return <<-END_AS
+      import mx.controls.Alert;
+      public static function debug(str:String):void {
+        /* Alert.show(str); */
+      }
+    END_AS
   end
   
   def to_mxml
