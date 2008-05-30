@@ -4,8 +4,6 @@ require 'fastercsv'
       
 module ScaffoldLimberResource
   
-  ActionController::Base.extend ClassMethods
-  
   module ClassMethods
     HTML_FORMAT_NOT_SUPPORTED = 'scaffold_limber_resource: HTML format not supported.'
 
@@ -252,4 +250,6 @@ module ScaffoldLimberResource
     end
         
   end
+  
+  ActionController::Base.extend ClassMethods
 end
