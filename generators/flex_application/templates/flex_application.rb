@@ -4,7 +4,7 @@
 # Components of this application are defined in the app/flex/<%= file_name %> directory.
 #
 
-class <%= file_name.camelcase %> < Limber::FlexApplication
+class <%= file_name.camelcase %> < Limber::Components::Application
   
   has_attributes :height => "100%", :width => "100%"
   
