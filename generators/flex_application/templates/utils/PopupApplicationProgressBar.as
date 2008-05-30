@@ -21,7 +21,7 @@ package com.<%= file_name %>.util {
 		
 		public function incrementTotalProgressSteps():void {
 			totalProgressSteps += 1;
-			if(popup == null) { popup = new PopupProgress(); }
+			if(popup == null) { popup = new ProgressPopup(); }
 			if(totalProgressSteps == 1) {
 				PopUpManager.addPopUp(popup, Application(Application.application), true);
 				PopUpManager.centerPopUp(popup);

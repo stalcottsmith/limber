@@ -3,7 +3,7 @@
 package com.<%= file_name %>.model {
 	<% if model_has_many_associations.size > 0 %>import mx.collections.ArrayCollection;
     <% end %>import com.<%= file_name %>.util.XMLUtils;
-	import com.greenfish.util.DateUtils;
+	import com.<%= file_name %>.util.DateUtils;
     
     public class <%= model_name %> {
         public static const UNSAVED_ID:int = 0;

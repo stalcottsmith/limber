@@ -26,6 +26,7 @@ class FlexApplicationGenerator < Rails::Generator::NamedBase
       m.directory("app/flex/com/#{file_name}/control")
   	  m.directory("app/flex/com/#{file_name}/model")
   	  m.directory("app/flex/com/#{file_name}/util")
+  	  m.template("utils/DateUtils.as", "app/flex/com/#{file_name}/util/DateUtils.as")
   	  m.template("utils/CairngormUtils.as", "app/flex/com/#{file_name}/util/CairngormUtils.as")
   	  m.template("utils/DebugMessage.as", "app/flex/com/#{file_name}/util/DebugMessage.as")
   	  m.template("utils/PopupApplicationProgressBar.as", "app/flex/com/#{file_name}/util/PopupApplicationProgressBar.as", :collision => :skip)
