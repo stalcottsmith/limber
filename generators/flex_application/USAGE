@@ -1,0 +1,100 @@
+Usage: script/generate flex_application [app_name] [model1, model2, ...]
+
+Description:
+    Generates the source for an Adobe Flex application 
+    (Rich Internet Application) based on your Rails app.
+
+    The Limber plugin also provides the rake tasks to regenerate,
+    build and install the compiled Flex app.
+    
+    CREDIT: The layout and structure of the generated application
+    is based on the examples provided in the book, Flexible Rails,
+    by Peter Armstrong. (http://www.manning.com/armstrong/)
+
+Example:
+
+    Firstly, the command:  
+    (note the absence of model specifications, see below)
+
+      ./script/generate flex_application MyFirstFlexApp
+
+    will create:
+      app/flex
+      app/flex/com
+      app/flex/com/my_first_flex_app
+      app/flex/com/my_first_flex_app/assets
+      app/flex/com/my_first_flex_app/business
+      app/flex/com/my_first_flex_app/command
+      app/flex/com/my_first_flex_app/components
+      app/flex/com/my_first_flex_app/control
+      app/flex/com/my_first_flex_app/model
+      app/flex/com/my_first_flex_app/util
+      app/flex/com/my_first_flex_app/util/CairngormUtils.as
+      app/flex/com/my_first_flex_app/util/DebugMessage.as
+      app/flex/com/my_first_flex_app/util/ServiceUtils.as
+      app/flex/com/my_first_flex_app/util/XMLUtils.as
+      app/flex/com/my_first_flex_app/validators
+      app/flex/my_first_flex_app.rb
+      app/flex/lib
+      app/flex/lib/Cairngorm.swc
+      public/MyFirstFlexApp.html
+
+    Once this is done, if you did not include any models when you
+    generated the initial flex layout, you may generate your Flex
+    models corresponding to the Rails models you want your Flex app
+    to use.  Without parameters, it will generate code for every
+    model in your Rails app.  Skip to the end to learn how to do all
+    the following in a single step.
+
+    The command:
+
+      rake limber:generate_models task
+
+    will create:
+      app/flex/com/my_first_flex_app/business/TaskDelegate.as
+      app/flex/com/my_first_flex_app/command/CreateTaskCommand.as
+      app/flex/com/my_first_flex_app/command/DestroyTaskCommand.as
+      app/flex/com/my_first_flex_app/command/ListTasksCommand.as
+      app/flex/com/my_first_flex_app/command/UpdateTasksCommand.as
+      app/flex/com/my_first_flex_app/model/Task.as
+    
+    At this point you will want to edit app/flex/my_first_flex_app.rb 
+    to make    your application gui do something useful with these models.
+    See the Limber API documentation for further information.  Once this
+    is done, proceed with building your app.
+    
+    The command:
+    
+      rake limber:generate_app my_first_flex_app
+    
+    will create: (and possibly other files)
+    
+      app/flex/MyFirstFlexApp.mxml
+    
+    The command:
+    
+      rake limber:compile my_first_flex_app
+    
+    will run the Adobe Flex compiler on your application and 
+    will create:
+    
+      app/flex/MyFirstFlexApp.swf
+    
+    Now your app is compiled!  Install it.  The command:
+    
+      rake limber:install my_first_flex_app
+    
+    which will copy it into the public directory where browsers
+    can find it.
+    
+    
+    And if you found all the rake tasks tedious, and you have 
+    a useful my_first_flex_app.rb already built, you may do the
+    entire procedure in one step.
+    
+    The command:
+    
+      rake limber:flex my_first_flex_app
+    
+    will do the whole thing.
+    

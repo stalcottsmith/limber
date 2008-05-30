@@ -1,0 +1,24 @@
+Limber
+======
+
+Generates an Adobe Flex application (Rich Internet Application) based on your
+Rails app.  The application tree will appear under app/flex.  This plugin
+also provides the rake tasks to regenerate, build and install the compiled Flex app.
+
+CREDIT: The layout and structure of the generated application is based on the 
+examples provided in the book, Flexible Rails by Peter Armstrong. (http://www.manning.com/armstrong/)
+
+Buy the book to learn more about how all this works.
+
+
+Example
+=======
+
+	The command:
+
+    ./script/generate flex_application
+
+	provides usage instructions.  For additional information, see the api documentation.
+	
+
+Copyright (c) 2008 Steven Talcott Smith, released under the MIT license

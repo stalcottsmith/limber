@@ -1,0 +1,112 @@
+8
+
+dir
+23
+https://limber-plugin.googlecode.com/svn/trunk/limber
+https://limber-plugin.googlecode.com/svn
+
+
+
+2008-05-27T14:06:56.288264Z
+23
+steve@talcottsystems.com
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+639e7e57-cb48-0410-bf71-c152f7c7946b
+
+test
+dir
+
+Rakefile
+file
+
+
+
+
+2008-03-19T18:31:01.000000Z
+111ba4173dc940a61e1de0b5d2b2a924
+2008-03-19T18:32:58.528662Z
+2
+steve@talcottsystems.com
+
+init.rb
+file
+
+
+
+
+2008-05-30T03:32:51.000000Z
+65a3ab097a2e1136ec89ca3bc3beff8c
+2008-04-10T15:39:21.240625Z
+15
+steve@talcottsystems.com
+
+tasks
+dir
+
+lib
+dir
+
+install.rb
+file
+
+
+
+
+2008-03-19T18:31:01.000000Z
+cbe738c10eba4ae2da8c6859c9723e44
+2008-03-19T18:32:58.528662Z
+2
+steve@talcottsystems.com
+
+generators
+dir
+
+MIT-LICENSE
+file
+
+
+
+
+2008-03-19T18:31:01.000000Z
+9b63410e1b42eacf35c7d1f7d9e06e64
+2008-03-19T18:32:58.528662Z
+2
+steve@talcottsystems.com
+
+uninstall.rb
+file
+
+
+
+
+2008-03-19T18:31:01.000000Z
+2a5fc883fe7f8dfe22ced24643d59ad4
+2008-03-19T18:32:58.528662Z
+2
+steve@talcottsystems.com
+
+README
+file
+
+
+
+
+2008-03-19T18:31:01.000000Z
+d55d769a582556373574ab7d607270e5
+2008-03-19T18:32:58.528662Z
+2
+steve@talcottsystems.com
+

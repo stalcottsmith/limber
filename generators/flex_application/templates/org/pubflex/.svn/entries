@@ -1,0 +1,40 @@
+8
+
+dir
+23
+https://limber-plugin.googlecode.com/svn/trunk/limber/generators/flex_application/templates/org/pubflex
+https://limber-plugin.googlecode.com/svn
+
+
+
+2008-05-12T14:19:39.878803Z
+22
+steve@talcottsystems.com
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+639e7e57-cb48-0410-bf71-c152f7c7946b
+
+SocketURLLoader.as
+file
+
+
+
+
+2008-05-30T03:32:50.000000Z
+859634b0a1965afb6816602775d88035
+2008-05-12T14:19:39.878803Z
+22
+steve@talcottsystems.com
+

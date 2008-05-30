@@ -1,0 +1,55 @@
+8
+
+dir
+23
+https://limber-plugin.googlecode.com/svn/trunk/limber/generators/flex_application
+https://limber-plugin.googlecode.com/svn
+
+
+
+2008-05-27T14:06:56.288264Z
+23
+steve@talcottsystems.com
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+639e7e57-cb48-0410-bf71-c152f7c7946b
+
+USAGE
+file
+
+
+
+
+2008-03-19T18:31:01.000000Z
+73698fb883e740182cc6666314bdde8d
+2008-03-19T18:32:58.528662Z
+2
+steve@talcottsystems.com
+
+flex_application_generator.rb
+file
+
+
+
+
+2008-05-30T03:32:50.000000Z
+482067d51a579b970cdcbc225aeffb26
+2008-04-27T23:20:36.384856Z
+19
+steve@talcottsystems.com
+
+templates
+dir
+
