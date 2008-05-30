@@ -5,6 +5,7 @@ require 'rake'
 require 'limber/core_ext/string'
 require 'limber/core_ext/hash'
 require 'limber/core_ext/active_record_base'
+require 'limber/core_ext/scaffold_limber_resource'
 
 module Limber
   
@@ -79,4 +80,3 @@ require 'limber/components/form_for'
 require 'limber/components/create_or_update_buttons_for'
 require 'limber/components/filter_combo_box_for'
 require 'limber/components/date_range_selector'
-require 'limber/components/scaffold_limber_resource'
