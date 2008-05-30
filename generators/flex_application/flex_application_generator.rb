@@ -8,6 +8,8 @@ class FlexApplicationGenerator < Rails::Generator::NamedBase
     record do |m|
       m.directory("app/flex")
   	  m.template("flex_application.rb", "app/flex/#{file_name}.rb", :collision => :skip)
+  	  m.directory("app/flex/#{file_name}")
+  	  m.template("progress_popup.rb", "app/flex/#{file_name}/progress_popup.rb", :collision => :skip)
   	  m.directory("app/flex/com")
   	  m.directory("app/flex/com/#{file_name}")
   	  m.directory("app/flex/com/#{file_name}/assets")
@@ -30,7 +32,7 @@ class FlexApplicationGenerator < Rails::Generator::NamedBase
   	  m.template("com/validators/ServerErrorValidator.as", "app/flex/com/#{file_name}/validators/ServerErrorValidator.as")
   	  m.directory("app/flex/lib")
   	  m.file("lib/Cairngorm.swc", "app/flex/lib/Cairngorm.swc")
-  	  m.template("public/Application.html", "public/#{file_name.camelcase}.html")
+  	  m.template("public/Application.html", "public/#{file_name.camelcase}.html", :collision => :skip)
   	  m.directory("public/javascripts")
   	  m.directory("public/javascripts/flex")
   	  m.file("public/AC_OETags.js", "public/javascripts/flex/AC_OETags.js")

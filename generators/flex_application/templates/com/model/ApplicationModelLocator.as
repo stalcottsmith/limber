@@ -16,7 +16,7 @@ package com.<%= file_name %>.model {
         //
         //Public properties
         //
-        public var user:User;
+        <% if actions.include?('user') %>public var user:User;<% end %>
 
 		<% model_names.each do |model| %>
         public var current<%= model.camelcase %>:<%= model.camelcase %>;

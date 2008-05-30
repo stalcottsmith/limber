@@ -9,7 +9,6 @@ require 'limber/core_ext/scaffold_limber_resource'
 
 module Limber
   
-  
   def self.const_missing(symbol)
     module_eval %{
       class Limber::#{symbol.to_s.camelcase} < Limber::Components::CustomComponent

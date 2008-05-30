@@ -2,7 +2,7 @@
       
 require 'fastercsv'
       
-module Limber::CoreExt::ScaffoldLimberResource
+module ScaffoldLimberResource
   
   ActionController::Base.extend ClassMethods
   
