@@ -6,7 +6,7 @@
 
 class <%= file_name.camelcase %> < Limber::FlexApplication
   
-  # has_attributes :height => "100%", :width => "100%"
+  has_attributes :height => "100%", :width => "100%"
   
   has_components :progress_popup
   
