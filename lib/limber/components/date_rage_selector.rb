@@ -1,6 +1,6 @@
 module Limber
   module Components
-    class ReportDateRangeSelector < FlexMxmlComponent
+    class DateRangeSelector < FlexMxmlComponent
       
       def initialize(collection, *args)
         @collection = collection
@@ -88,12 +88,6 @@ module Limber
     			
           }
 
-          private function buildCsvLinkString(urlPath:String):String {
-            return buildUrlPath()+"?from="+
-                   dateFormatter.format(fromDate.selectedDate) +"&to="+
-                   dateFormatter.format(toDate.selectedDate);
-          }
-
         END_AS
       end    
       
@@ -111,12 +105,6 @@ module Limber
           label :text => "To:"
           date_field :toDate, :selected_date => '{beginningOfThisMonth}',
                      :change => list_event(@collection, 'dateRangeQueryParameters()').dispatch
-
-          spacer :width => 100
-
-          link_button( :label => "Export to Excel (CSV)", 
-                       :click => "navigateToURL(new URLRequest(buildCsvLinkString('#{@url_path}')));",
-                       :text_decoration => "underline", :id => nil)           
         }
       end
     end
