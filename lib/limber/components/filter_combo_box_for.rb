@@ -12,11 +12,7 @@ module Limber
         @filter_property = filter_hash.keys.first
         @filter_options = filter_hash.values.first
       end
-      
-      def app_name
-        'Vmi'
-      end
-      
+            
       def create_array_collection_if_necessary
         if(@filter_options.is_a?(Array))
           options_collection_name = "#{@collection_name.to_s.varify}FilterOptions"

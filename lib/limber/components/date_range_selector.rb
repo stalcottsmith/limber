@@ -91,10 +91,6 @@ module Limber
         END_AS
       end    
       
-      def app_name
-        'Vmi'
-      end
-            
       def to_mxml
         date_formatter :format_string => "YYYY-MM-DD"
 

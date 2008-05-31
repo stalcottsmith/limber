@@ -9,6 +9,16 @@ require 'limber/core_ext/scaffold_limber_resource'
 
 module Limber
   
+  def self.set_app_name(name)
+    @@app_name = name
+  end
+  
+  def self.app_name
+    raise "app_name not set" unless @@app_name
+    @@app_name
+  end
+  
+  
   def self.const_missing(symbol)
     module_eval %{
       class Limber::#{symbol.to_s.camelcase} < Limber::Components::CustomComponent

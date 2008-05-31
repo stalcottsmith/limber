@@ -46,6 +46,11 @@ module Limber
         @component_action_script ||= ''
       end
       
+      def app_name
+        Limber.app_name
+      end
+      
+      
   
       def method_missing(symbol, *args)
         unless s = Limber::Behavior.find(symbol, self, *args)

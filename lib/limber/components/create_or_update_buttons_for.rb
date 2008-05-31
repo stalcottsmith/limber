@@ -10,10 +10,6 @@ module Limber
         @after_create = @attributes.delete(:after_create)
         @after_update = @attributes.delete(:after_update)
       end
-      
-      def app_name
-        'Vmi'
-      end
             
       def to_mxml
         view_stack("#{@model_name.to_s.varify}VSK".to_sym, :selected_index => bind_to("#{@attributes[:create_or_update]} == 0 ? 0 : 1")) do

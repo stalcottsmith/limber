@@ -12,10 +12,6 @@ module Limber
         @attributes.merge!(args[0])
       end
       
-      def app_name
-        'Vmi'
-      end
-            
       def to_mxml
         unless @drag_and_drop_reorder_by.nil?
           @attributes.merge!(:drag_move_enabled => true, :drag_enabled => true, :drop_enabled => true, 
