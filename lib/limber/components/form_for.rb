@@ -12,13 +12,7 @@ module Limber
         @form_values = {}
         @do_not_clear = []
       end
-      
-      # TODO: FIX THIS APP_NAME CRAP!!!
-      # THIS SHOULD NOT BE HARD CODED - DEBUGGING ELUSIVE
-      def app_name
-        'Vmi'
-      end
-      
+            
       def to_mxml
         form_id = (@model_name.to_s.varify+"Form").to_sym
         form(form_id, {:style_name => form_id}.merge(@attributes)) do
@@ -137,6 +131,14 @@ module Limber
           control_bar({:padding_left => 0, :id => nil}.merge(params)) {
             yield
           }
+        }
+      end
+      
+      def create_or_update_buttons(params={})
+        options = {:create => form_values,
+                   :update => form_values.merge(:id => model_value(@model_name, :id))}.merge(params)
+        button_bar {
+          create_or_update_buttons_for(@model_name, options)
         }
       end
       
