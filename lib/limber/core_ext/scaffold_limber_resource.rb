@@ -8,17 +8,17 @@ module ScaffoldLimberResource
     HTML_FORMAT_NOT_SUPPORTED = 'scaffold_limber_resource: HTML format not supported.'
 
 
-    def scaffold_limber_resource(model_id, options = {})
+    def scaffold_limber_resource(collection_name, options = {})
       options.assert_valid_keys(:class_name, :suffix, :per_page, :only,
                                 :to_xml, :find, :paginate, :scope, 
                                 :open_scope, :offset_scope, :offer_csv,
                                 :csv_file_name)
 
-      singular_name = model_id.to_s
+      plural_name   = collection_name.to_s
+      singular_name = plural_name.singularize
       class_name    = options[:class_name] || singular_name.camelize
       per_page      = options[:per_page] || 20
       only_actions  = options[:only]
-      plural_name   = singular_name.pluralize
       suffix        = options[:suffix] ? "_#{singular_name}" : ""
       paginate      = options[:paginate].nil? ? true : options[:paginate]
       find_opts     = options[:find]
