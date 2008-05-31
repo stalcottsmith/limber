@@ -135,8 +135,11 @@ module Limber
       end
       
       def create_or_update_buttons(params={})
-        options = {:create => form_values,
-                   :update => form_values.merge(:id => model_value(@model_name, :id))}.merge(params)
+        options = {:create => form_values, 
+                   :after_create => clear,
+                   :update => form_values.merge(:id => model_value(@model_name, :id)),
+                   :after_update => clear}.merge(params)
+                   
         button_bar {
           create_or_update_buttons_for(@model_name, options)
         }
